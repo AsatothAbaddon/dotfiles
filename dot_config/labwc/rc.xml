@@ -1,0 +1,106 @@
+<!--
+  This is a very simple config file with many options missing. For a complete
+  set of options with comments, see docs/rc.xml.all
+-->
+<labwc_config>
+  <core>
+    <decoration>server</decoration>
+    <gap>8</gap>
+  </core>
+  <theme>
+    <name>catppuccin-latte</name>
+    <cornerRadius>0</cornerRadius>
+    <font name="Iosevka" size="12" />
+    <titlebar>
+      <layout>icon:iconify,max,close</layout>
+      <showTitle>yes</showTitle>
+    </titlebar>
+    <font place="ActiveWindow">
+      <name>Sans</name>
+      <size>8</size>
+      <weight />
+      <slant />
+    </font>
+    <font place="InactiveWindow">
+      <name>Sans</name>
+      <size>8</size>
+      <weight />
+      <slant />
+    </font>
+    <font place="MenuHeader">
+      <name>Sans</name>
+      <size>8</size>
+      <weight />
+      <slant />
+    </font>
+    <font place="MenuItem">
+      <name>Sans</name>
+      <size>8</size>
+      <weight />
+      <slant />
+    </font>
+    <font place="OnScreenDisplay">
+      <name>Sans</name>
+      <size>8</size>
+      <weight />
+      <slant />
+    </font>
+    <keepBorder>yes</keepBorder>
+    <maximizedDecoration>titlebar</maximizedDecoration>
+    <icon>Papirus-Light</icon>
+  </theme>
+  <keyboard>
+    <default />
+    <!-- Use a different terminal emulator -->
+    <keybind key="W-Return">
+      <action name="Execute" command="foot" />
+    </keybind>
+    <keybind key="W-Space">
+      <action name="Execute" command="rofi -show drun" />
+    </keybind>
+    <keybind key="W-e">
+      <action name="Execute" command="dolphin" />
+    </keybind>
+    <!--
+      Remove a previously defined keybind
+      A shorter alternative is <keybind key="W-F4"    />
+    -->
+    <keybind key="W-F4">
+      <action name="None" />
+    </keybind>
+  </keyboard>
+  <mouse>
+    <default />
+    <!-- Show a custom menu on desktop right click -->
+    <context name="Root">
+      <mousebind button="Right" action="Press">
+        <action name="ShowMenu" menu="some-custom-menu" />
+      </mousebind>
+    </context>
+  </mouse>
+  <desktops>
+    <initial>1</initial>
+    <popupTime>1000</popupTime>
+    <prefix>Workspace</prefix>
+  </desktops>
+  <placement>
+    <policy>cascade</policy>
+    <cascadeOffset>
+      <x>40</x>
+      <y>30</y>
+    </cascadeOffset>
+  </placement>
+  <windowSwitcher>
+    <osd>
+      <style>classic</style>
+      <show>yes</show>
+      <output>all</output>
+    </osd>
+    <preview>yes</preview>
+    <outlines>yes</outlines>
+  </windowSwitcher>
+  <resize>
+    <popupShow>Never</popupShow>
+    <drawContents>yes</drawContents>
+  </resize>
+</labwc_config>
